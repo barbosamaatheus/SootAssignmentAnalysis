@@ -20,7 +20,12 @@ public class AssignmentCountingAnalysis {
 
             for (Unit u : body.getUnits()) {
                 if (u instanceof AssignStmt) {
-                    assignmentCount++;
+                    AssignStmt assignStmt = (AssignStmt) u;
+                    Value leftOp = assignStmt.getLeftOp();
+
+                    if (leftOp instanceof Local) {
+                        assignmentCount++;
+                    }
                 }
             }
 

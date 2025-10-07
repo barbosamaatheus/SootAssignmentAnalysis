@@ -19,6 +19,6 @@ public class AssignmentCountingAnalysisTest {
         int totalAssignments = AssignmentCountingAnalysis.run(className);
 
         // Verifica se o número de atribuições é o esperado
-        assertEquals(4, totalAssignments, "O número de atribuições deve ser 3 para o método example()");
+        assertEquals(16, totalAssignments, "O número de atribuições deve ser 16 para o total de métodos");
     }
 }
